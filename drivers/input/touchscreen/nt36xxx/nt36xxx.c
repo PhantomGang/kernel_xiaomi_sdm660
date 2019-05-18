@@ -1687,7 +1687,7 @@ static ssize_t nvt_panel_wake_gesture_store(struct device *dev,
 		ts->gesture_enabled = i;
 		return count;
 	} else {
-		dev_dbg(dev, "enable_dt2w write error\n");
+		dev_dbg(dev, "wake_gesture write error\n");
 		return -EINVAL;
 	}
 }
@@ -1779,7 +1779,7 @@ static struct attribute *nvt_attr_group[] = {
 	&dev_attr_panel_color.attr,
 	&dev_attr_panel_display.attr,
 	&dev_attr_grip_area.attr,
-        &dev_attr_wake_gesture.attr,
+    &dev_attr_wake_gesture.attr,
 	NULL,
 };
 
